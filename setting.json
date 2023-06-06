@@ -1,0 +1,77 @@
+{
+    // vscode settings
+    "files.autoSave": "afterDelay", //file auto sae
+    "editor.wordWrap": "on",
+    "emmet.variables": { // emmet 日本語化
+        "lang": "ja"
+    },
+
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "editor.minimap.enabled": false,
+    "emmet.triggerExpansionOnTab": true,
+    "editor.mouseWheelZoom": true,
+    "editor.fontSize": 15,
+    "editor.detectIndentation": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "audioCues.lineHasError":"off",
+    "editor.acceptSuggestionOnEnter": "off",
+
+    "[python]": {
+        "editor.formatOnType": true
+    },
+
+    "editor.tabSize": 2,
+    "editor.lineNumbers": "on",
+
+    "emmet.includeLanguages": {
+      "erb": "html"
+    },
+    "editor.renderLineHighlight": "all", //現在の行番号含めて強調表示する
+    "editor.insertSpaces": true, //tabをスペースとして扱う
+    "editor.renderControlCharacters": true, //制御文字の表示
+    "editor.cursorBlinking": "smooth", //カーソルの点滅をヌルヌルにする
+    "editor.autoIndent": "full", //autoindentを入れる
+    "extensions.autoUpdate": true, //プラグインを自動アップデート
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    "breadcrumbs.enabled": false, //パンクズリストはそんなに使わないし非表示
+    "git.enableSmartCommit": true,
+    
+    "workbench.colorTheme": "One Dark Pro Mix", //surroundを有効にする
+
+
+    //vim settings
+    "vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "j"],
+        "after": ["<Esc>"]
+    },
+    ],
+     "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": ["H"], "after": ["^"] }, //端に移動
+        { "before": ["L"], "after": ["$"] }, //端に移動
+        { "before": ["u"], "commands": [{ "command": "undo"}]},
+        { "before": ["<C-r>"], "commands": [{"command": "redo"}]},
+        { "before": ["<Leader>", "u"], "after": ["g", "t"] }, //tab移動
+        { "before": ["<Leader>", "y"], "after": ["g", "T"] }, //tab移動
+        { "before": ["<Leader>", "x"], "commands": [":q!"] }, //tabを閉じる
+        { "before": ["<Leader>", "q"], "commands": [":qa!"] }, //すべてを閉じる
+        { "before": ["<Leader>", "w"], "commands": [":wa"] }, //すべてを保存
+        { "before": ["<Leader>", "o"], "after": ["o", "<ESC>"] }, //空の行を挿入
+        { "before": ["<Leader>", "O"], "after": ["O", "<ESC>"] }, //空の行を挿入
+        { "before": ["<Leader>", "C"], "after": ["v", "^", "c"]}, //カーソル左側の書き換え
+        { "before": ["<Leader>", "S"], "after": ["v", "^", "s"]}, //カーソル左側の書き換え
+        { "before": ["<Leader>", "D"], "after": ["v", "^", "d"]}, //カーソル左側の消去
+     ],
+    "vim.hlsearch": true,
+    "vim.easymotion": true, //easy motionを有効化
+    "vim.surround": true,
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true, //yank などをクリップボードにもコピー
+    "vim.highlightedyank.enable": true, //yankした箇所をハイライト表示にする
+    "vim.highlightedyank.color": "rgba(245, 151, 103, 1)", //yankした時の色
+    "vim.highlightedyank.duration": 200, //yankした時の色の表示時間
+
+
+    
+  }
