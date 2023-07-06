@@ -1,6 +1,8 @@
 inoremap <silent> jk <ESC>
 let mapleader = "\<space>"
 
+inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#confirm() : "\<Tab>"
+
 nnoremap H ^
 nnoremap L $
 noremap :fzf :FZF

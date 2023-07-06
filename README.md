@@ -1,3 +1,4 @@
-# vim_settings
-vscodeのプラグインでvimを使っているのでその設定ファイルです。
-機会があれば.vimrcとかもpushしたいです。
+## vim_settings
+- setting.json: vscodeのプラグイン
+- init.vim: nvimの設定ファイル
+    - ~/.config/nvim/init.vim
