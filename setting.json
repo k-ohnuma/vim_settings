@@ -8,6 +8,7 @@
 
     "python.terminal.activateEnvInCurrentTerminal": true,
     "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
     "emmet.triggerExpansionOnTab": true,
     "editor.mouseWheelZoom": true,
     "editor.fontSize": 15,
@@ -27,7 +28,7 @@
       "erb": "html"
     },
     "editor.renderLineHighlight": "all", //現在の行番号含めて強調表示する
-    "editor.insertSpaces": true, //tabをスペースとして扱う
+    // "editor.insertSpaces": true, //tabをスペースとして扱う
     "editor.renderControlCharacters": true, //制御文字の表示
     "editor.cursorBlinking": "smooth", //カーソルの点滅をヌルヌルにする
     "editor.autoIndent": "full", //autoindentを入れる
@@ -35,23 +36,20 @@
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",
     "breadcrumbs.enabled": false, //パンクズリストはそんなに使わないし非表示
-    "git.enableSmartCommit": true,
-    
-    "workbench.colorTheme": "One Dark Pro Mix", //surroundを有効にする
-
+    "git.enableSmartCommit": true, //surroundを有効にする
 
     //vim settings
     "vim.insertModeKeyBindings": [
     {
-        "before": ["j", "j"],
+        "before": ["j", "k"],
         "after": ["<Esc>"]
     },
     ],
      "vim.normalModeKeyBindingsNonRecursive": [
         { "before": ["H"], "after": ["^"] }, //端に移動
         { "before": ["L"], "after": ["$"] }, //端に移動
-        { "before": ["u"], "commands": [{ "command": "undo"}]},
-        { "before": ["<C-r>"], "commands": [{"command": "redo"}]},
+        // { "before": ["u"], "commands": [{ "command": "undo"}]},
+        // { "before": ["<C-r>"], "commands": [{"command": "redo"}]},
         { "before": ["<Leader>", "u"], "after": ["g", "t"] }, //tab移動
         { "before": ["<Leader>", "y"], "after": ["g", "T"] }, //tab移動
         { "before": ["<Leader>", "x"], "commands": [":q!"] }, //tabを閉じる
@@ -62,6 +60,9 @@
         { "before": ["<Leader>", "C"], "after": ["v", "^", "c"]}, //カーソル左側の書き換え
         { "before": ["<Leader>", "S"], "after": ["v", "^", "s"]}, //カーソル左側の書き換え
         { "before": ["<Leader>", "D"], "after": ["v", "^", "d"]}, //カーソル左側の消去
+        { "before": ["J"], "after": ["1", "5", "j"]},
+        { "before": ["K"], "after": ["1", "5", "k"]},
+        { "before": ["<ESC>", "<ESC>"], "commands": [":noh"]}
      ],
     "vim.hlsearch": true,
     "vim.easymotion": true, //easy motionを有効化
@@ -69,9 +70,10 @@
     "vim.leader": "<space>",
     "vim.useSystemClipboard": true, //yank などをクリップボードにもコピー
     "vim.highlightedyank.enable": true, //yankした箇所をハイライト表示にする
-    "vim.highlightedyank.color": "rgba(245, 151, 103, 1)", //yankした時の色
+    "vim.highlightedyank.color": "rgba(255, 255, 255, .6)", //yankした時の色
     "vim.highlightedyank.duration": 200, //yankした時の色の表示時間
-
-
-    
+    "vim.visualstar": true,
+    "vim.enableNeovim": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Horizon",
   }

@@ -1,0 +1,130 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入しますauto[]
+[
+    {
+        "key": "ctrl+t",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "shift+enter",
+        "command": "cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "end",
+        "command": "-cursorEnd",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+backspace",
+        "command": "-deleteLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+backspace",
+        "command": "deleteLeft",
+        "when": "textInputFocus"
+    },
+    {
+      "key": "ctrl+e",
+      "command": "-workbench.action.quickOpen"
+    },
+    {
+      "key": "ctrl+shift+n",
+      "command": "welcome.showNewFileEntries"
+    },
+    {
+      "key": "ctrl+alt+win+n",
+      "command": "-welcome.showNewFileEntries"
+    },
+    {
+      "key": "ctrl+g",
+      "command": "-extension.vim_ctrl+g",
+      "when": "editorTextFocus && vim.active && vim.use<C-g> && !inDebugRepl"
+    },
+    {
+      "key": "ctrl+g",
+      "command": "extension.vim_ctrl+g"
+    },
+    {
+      "key": "ctrl+g",
+      "command": "-workbench.action.terminal.goToRecentDirectory",
+      "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+      "key": "ctrl+n",
+      "command": "-workbench.action.files.newUntitledFile"
+    },// サイドバー開閉
+
+    {
+        "key": "ctrl+n",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "explorerViewletFocus && listFocus &&explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.quickOpen"
+    },
+
+// エディタ間のフォーカス移動
+    {
+        "key": "ctrl+h",
+        "command": "-editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-testing.toggleTestingPeekHistory",
+        "when": "testing.isPeekVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+up",
+        "command": "-workbench.action.focusAboveGroup"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+down",
+        "command": "-workbench.action.focusBelowGroup"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+right",
+        "command": "-workbench.action.focusRightGroup"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+k ctrl+left",
+        "command": "-workbench.action.focusLeftGroup"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+'",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+        
+    },
+    {
+      "key": "ctrl+n",
+      "command": "-extension.vim_ctrl+n",
+      "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+]
